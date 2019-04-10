@@ -37,10 +37,10 @@ enum Algorithm
 {
     bubblesort,
     insertsort,
-    selectsort /*,
+    selectsort,
     shellsort,
-    quicksort,
-    mergesort*/
+    /* quicksort,
+    mergesort */
 };
 
 typedef void (*fptr)(void *, int, int);

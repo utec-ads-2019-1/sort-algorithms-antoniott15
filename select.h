@@ -13,15 +13,15 @@ class SelectSort : public Sort
         int *array = (int *)elements;
         for (int i = 0; i < size - 1; i++)
         {
-            int Min = i;
+            int Mininum = i;
             for (int j = i + 1; j < size; j++)
             {
-                if (array[j] < array[Min])
+                if (array[j] < array[Mininum])
                 {
-                    Min = j;
+                    Mininum = j;
                 }
             }
-            compare(elements, i, Min);
+            compare(elements, i, Mininum);
         }
     }
 
