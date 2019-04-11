@@ -38,9 +38,7 @@ enum Algorithm
     bubblesort,
     insertsort,
     selectsort,
-    shellsort,
-    /* quicksort,
-    mergesort */
+    shellsort
 };
 
 typedef void (*fptr)(void *, int, int);

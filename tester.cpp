@@ -30,15 +30,9 @@ void integersSelect(void *elements, int first, int second)
 void integerShell(void *elements, int first, int second)
 {
     int *array = (int *)elements;
-    /* for (int i = 0; i <= sizeof(array) / sizeof(array[0]); i++)
-    {
-        cout << array[i] << endl;
-    }
+}
 
-    if (first < second)
-    {
-        swap(first, second);
-    }*/
+
 }
 Sort *Tester::getSort(Algorithm sort, void *array, size_t size)
 {
@@ -52,10 +46,6 @@ Sort *Tester::getSort(Algorithm sort, void *array, size_t size)
         return new SelectSort(array, size);
     case shellsort:
         return new ShellSort(array, size);
-        /*case quicksort:
-        return new QuickSort(array, size);
-    case mergesort:
-        return new MergeSort(array, size);*/
     default:
         throw invalid_argument("Not a valid sort");
     }
@@ -83,7 +73,9 @@ void Tester::integerSorts(int *array, size_t size)
     Sort *sort;
     int temp[size];
 
-    Algorithm algorithm[] = {bubblesort, insertsort, selectsort, shellsort, /*quicksort,mergesort */};
+
+    Algorithm algorithm[] = {bubblesort, insertsort, selectsort, shellsort /*, quicksort ,mergesort */};
+
     size_t numberOfAlgorithms = sizeof(algorithm) / sizeof(algorithm[0]);
 
     for (int i = 0; i < numberOfAlgorithms; i++)

@@ -17,9 +17,14 @@ public:
       for (j = i; j < size; j++)
       {
         temp = array[j];
-        for (k = j; k >= i; k -= i)
+        k = j;
+        while (k >= i)
         {
-          array[k - i] > temp ? array[k] = array[k - i] : false;
+          if (temp < array[k - i])
+            array[k] = array[k - i];
+          else
+            break;
+          k -= i;
         }
         array[k] = temp;
       }
